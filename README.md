@@ -1,4 +1,4 @@
-# Dashboard Analytics Application
+# Dashboard Application
 
 A comprehensive, full-stack business analytics dashboard application built with React and Node.js. This application provides real-time insights into sales, customers, products, transactions, and geographic data through an intuitive and modern user interface.
 
@@ -13,115 +13,79 @@ A comprehensive, full-stack business analytics dashboard application built with 
 - [Configuration](#configuration)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
+- [Frontend Routes](#frontend-routes)
 - [Database Models](#database-models)
-- [Frontend Architecture](#frontend-architecture)
 - [Development](#development)
-- [Deployment](#deployment)
+- [Building for Production](#building-for-production)
+- [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## 🎯 Overview
 
-This dashboard application is designed to help businesses monitor and analyze their operations through comprehensive data visualization and reporting. The application features a responsive design with dark/light mode support, interactive charts, and real-time data updates.
+This dashboard application is designed to provide business intelligence and analytics capabilities for managing and visualizing key business metrics. The application features a responsive design with dark/light mode support, interactive charts, data grids, and comprehensive reporting capabilities.
 
 ### Key Capabilities
 
-- **Real-time Analytics**: Monitor sales, transactions, and customer data in real-time
+- **Real-time Analytics**: View up-to-date statistics on sales, customers, and transactions
 - **Data Visualization**: Interactive charts and graphs using Nivo visualization library
-- **User Management**: Role-based access control (user, admin, superadmin)
-- **Geographic Analysis**: Visualize sales and customer data by geographic location
-- **Performance Tracking**: Monitor individual user and affiliate performance
-- **Responsive Design**: Fully responsive UI that works on all device sizes
-- **Theme Support**: Dark and light mode with customizable color schemes
+- **User Management**: Admin panel for managing users and permissions
+- **Geographic Insights**: Visual representation of sales data by geographic location
+- **Transaction Management**: Comprehensive transaction tracking and filtering
+- **Product Analytics**: Detailed product performance metrics and statistics
+- **Performance Monitoring**: Track user and system performance metrics
 
 ## ✨ Features
 
-### Dashboard Views
+### Frontend Features
 
-1. **Main Dashboard** (`/dashboard`)
+- 🎨 **Modern UI/UX**: Built with Material-UI (MUI) for a polished, professional interface
+- 🌓 **Dark/Light Mode**: Toggle between dark and light themes
+- 📊 **Interactive Charts**: Multiple chart types including line, bar, pie, and geographic maps
+- 📱 **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
+- 🔍 **Advanced Data Grids**: Sortable, filterable, and searchable data tables
+- 🧭 **Navigation**: Intuitive sidebar navigation with route management
+- ⚡ **State Management**: Redux Toolkit for efficient state management
+- 🎯 **Real-time Updates**: RTK Query for efficient data fetching and caching
 
-   - Overview of key metrics and KPIs
-   - Recent transactions table
-   - Sales breakdown by category
-   - Monthly and daily statistics
+### Backend Features
 
-2. **Products** (`/products`)
+- 🚀 **RESTful API**: Well-structured REST API endpoints
+- 🔒 **Security**: Helmet.js for security headers, CORS configuration
+- 📝 **Logging**: Morgan middleware for HTTP request logging
+- 🗄️ **Database**: MongoDB with Mongoose ODM
+- 📦 **Modular Architecture**: Organized controllers, routes, and models
+- 🔄 **Data Seeding**: Built-in data seeding capabilities for development
 
-   - Product listing and management
-   - Product statistics and performance metrics
-   - Product sales analytics
-
-3. **Customers** (`/customers`)
-
-   - Customer database management
-   - Customer analytics and insights
-   - Customer transaction history
-
-4. **Transactions** (`/transactions`)
-
-   - Transaction history with pagination
-   - Advanced filtering and sorting
-   - Search functionality
-   - Export capabilities
-
-5. **Geography** (`/geography`)
-
-   - Geographic distribution visualization
-   - Sales by country/region
-   - Interactive map charts
-
-6. **Sales Analytics**
-
-   - **Overview** (`/overview`): High-level sales metrics
-   - **Daily** (`/daily`): Daily sales breakdown
-   - **Monthly** (`/monthly`): Monthly sales trends
-   - **Breakdown** (`/breakdown`): Sales breakdown by category
-
-7. **Performance** (`/performance`)
-
-   - Individual user performance metrics
-   - Affiliate performance tracking
-   - Performance analytics
-
-8. **Admin** (`/admin`)
-   - User management
-   - System administration
-   - Role management
-
-## 🛠 Technology Stack
+## 🛠️ Technology Stack
 
 ### Frontend
 
-- **React 18.2.0** - Modern UI library
-- **Material-UI (MUI) 5.10.15** - Component library and design system
-- **Redux Toolkit 1.9.0** - State management
-- **RTK Query** - Data fetching and caching
-- **React Router DOM 6.4.3** - Client-side routing
-- **Nivo Charts** - Data visualization library
+- **React** (v18.2.0) - UI library
+- **Material-UI (MUI)** (v5.10.15) - Component library
+- **Redux Toolkit** (v1.9.0) - State management
+- **React Router DOM** (v6.4.3) - Routing
+- **Nivo Charts** (v0.80.0) - Data visualization
   - `@nivo/bar` - Bar charts
   - `@nivo/line` - Line charts
   - `@nivo/pie` - Pie charts
   - `@nivo/geo` - Geographic visualizations
-- **React DatePicker 4.8.0** - Date selection component
-- **Emotion** - CSS-in-JS styling solution
+- **MUI X Data Grid** (v5.17.13) - Advanced data tables
+- **Emotion** - CSS-in-JS styling
+- **React DatePicker** (v4.8.0) - Date selection component
 
 ### Backend
 
-- **Node.js** - JavaScript runtime
-- **Express 4.19.2** - Web application framework
-- **MongoDB** - NoSQL database
-- **Mongoose 8.4.3** - MongoDB object modeling
-- **Helmet 7.1.0** - Security middleware
-- **CORS 2.8.5** - Cross-origin resource sharing
-- **Morgan 1.10.0** - HTTP request logger
-- **Body-Parser 1.20.2** - Request body parsing
-- **dotenv 16.4.5** - Environment variable management
-- **country-iso-2-to-3 1.1.0** - Country code conversion
-
-### Development Tools
-
-- **Nodemon 3.1.4** - Development server auto-reload
-- **React Scripts 5.0.1** - Build tooling for React
+- **Node.js** - Runtime environment
+- **Express.js** (v4.19.2) - Web framework
+- **MongoDB** - Database
+- **Mongoose** (v8.4.3) - ODM for MongoDB
+- **CORS** (v2.8.5) - Cross-origin resource sharing
+- **Helmet** (v7.1.0) - Security middleware
+- **Morgan** (v1.10.0) - HTTP request logger
+- **Body Parser** (v1.20.2) - Request body parsing
+- **Dotenv** (v16.4.5) - Environment variable management
+- **Country ISO Converter** (v1.1.0) - Country code conversion utilities
 
 ## 📁 Project Structure
 
@@ -131,8 +95,7 @@ dashboard/
 │   ├── public/            # Static assets
 │   │   ├── index.html
 │   │   ├── favicon.ico
-│   │   ├── manifest.json
-│   │   └── robots.txt
+│   │   └── manifest.json
 │   ├── src/
 │   │   ├── assets/        # Images and static files
 │   │   ├── components/    # Reusable UI components
@@ -145,7 +108,7 @@ dashboard/
 │   │   │   ├── OverviewChart.jsx
 │   │   │   ├── Sidebar.jsx
 │   │   │   └── StatBox.jsx
-│   │   ├── scenes/        # Page components/views
+│   │   ├── scenes/        # Page components (routes)
 │   │   │   ├── admin/
 │   │   │   ├── breakdown/
 │   │   │   ├── customers/
@@ -165,7 +128,7 @@ dashboard/
 │   │   ├── App.js         # Main application component
 │   │   ├── index.js       # Application entry point
 │   │   ├── index.css      # Global styles
-│   │   └── theme.js       # Material-UI theme configuration
+│   │   └── theme.js       # MUI theme configuration
 │   ├── package.json
 │   └── jsconfig.json
 │
@@ -175,60 +138,66 @@ dashboard/
 │   │   ├── general.js
 │   │   ├── management.js
 │   │   └── sales.js
-│   ├── models/           # MongoDB schemas
+│   ├── data/              # Seed data
+│   │   └── index.js
+│   ├── models/            # Mongoose schemas
 │   │   ├── AffiliateStat.js
 │   │   ├── OverallStat.js
 │   │   ├── Product.js
 │   │   ├── ProductStat.js
 │   │   ├── Transaction.js
 │   │   └── User.js
-│   ├── routes/           # API route definitions
+│   ├── routes/            # API route definitions
 │   │   ├── client.js
 │   │   ├── general.js
 │   │   ├── management.js
 │   │   └── sales.js
-│   ├── data/            # Seed data (optional)
-│   │   └── index.js
-│   ├── index.js         # Server entry point
+│   ├── index.js           # Server entry point
 │   └── package.json
 │
-└── README.md            # This file
+└── README.md              # This file
 ```
 
 ## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 
-- **Node.js** (v14 or higher recommended)
-- **npm** (v6 or higher) or **yarn**
-- **MongoDB** (v4.4 or higher) - Local installation or MongoDB Atlas account
-- **Git** (for version control)
+- **Node.js** (v14.0.0 or higher) - [Download Node.js](https://nodejs.org/)
+- **npm** (v6.0.0 or higher) - Comes with Node.js
+- **MongoDB** (v4.4 or higher) - [Download MongoDB](https://www.mongodb.com/try/download/community)
+  - Alternatively, use MongoDB Atlas (cloud-hosted MongoDB)
+- **Git** - For version control (optional)
 
-### Verifying Installation
+### Recommended Tools
 
-```bash
-node --version
-npm --version
-mongod --version
-```
+- **MongoDB Compass** - GUI for MongoDB (optional but recommended)
+- **Postman** or **Insomnia** - For API testing (optional)
+- **VS Code** - Recommended code editor with extensions:
+  - ESLint
+  - Prettier
+  - MongoDB for VS Code
 
 ## 🚀 Installation
 
-### 1. Clone the Repository
+### Step 1: Clone the Repository
 
 ```bash
 git clone <repository-url>
 cd dashboard
 ```
 
-### 2. Install Server Dependencies
+### Step 2: Install Server Dependencies
+
+Navigate to the server directory and install dependencies:
 
 ```bash
 cd server
 npm install
 ```
 
-### 3. Install Client Dependencies
+### Step 3: Install Client Dependencies
+
+Navigate to the client directory and install dependencies:
 
 ```bash
 cd ../client
@@ -250,26 +219,66 @@ MONGO_URL=mongodb://localhost:27017/dashboard
 # OR for MongoDB Atlas:
 # MONGO_URL=mongodb+srv://username:password@cluster.mongodb.net/dashboard?retryWrites=true&w=majority
 
-# Optional: JWT Secret (if implementing authentication)
-# JWT_SECRET=your-secret-key-here
+# Optional: Add other environment variables as needed
 ```
 
-### Client Configuration
+### Client Environment Variables
 
 Create a `.env` file in the `client` directory:
 
 ```env
-# Backend API URL
+# API Base URL
 REACT_APP_BASE_URL=http://localhost:9000
 ```
 
-**Note**: For production, update `REACT_APP_BASE_URL` to your production API URL.
+**Note**: For production, update `REACT_APP_BASE_URL` to your production server URL.
+
+### MongoDB Setup
+
+#### Option 1: Local MongoDB
+
+1. Install MongoDB Community Edition
+2. Start MongoDB service:
+
+   ```bash
+   # Windows
+   net start MongoDB
+
+   # macOS/Linux
+   sudo systemctl start mongod
+   ```
+
+3. MongoDB will run on `mongodb://localhost:27017` by default
+
+#### Option 2: MongoDB Atlas (Cloud)
+
+1. Create a free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+2. Create a new cluster
+3. Create a database user
+4. Whitelist your IP address (or use `0.0.0.0/0` for development)
+5. Get your connection string and update `MONGO_URL` in `.env`
+
+### Database Seeding (Optional)
+
+To populate the database with sample data, uncomment the data insertion lines in `server/index.js`:
+
+```javascript
+// Uncomment these lines in server/index.js after first run:
+Product.insertMany(dataProduct);
+Transaction.insertMany(dataTransaction);
+OverallStat.insertMany(dataOverallStat);
+ProductStat.insertMany(dataProductStat);
+AffiliateStat.insertMany(dataAffiliateStat);
+User.insertMany(dataUser);
+```
+
+**Important**: Only run the seeding once. Comment these lines again after seeding to avoid duplicate data.
 
 ## 🏃 Running the Application
 
 ### Development Mode
 
-#### Start the Backend Server
+#### Terminal 1: Start the Backend Server
 
 ```bash
 cd server
@@ -278,16 +287,14 @@ npm run dev
 
 The server will start on `http://localhost:9000` (or the port specified in your `.env` file).
 
-#### Start the Frontend Development Server
-
-Open a new terminal window:
+#### Terminal 2: Start the Frontend Client
 
 ```bash
 cd client
 npm start
 ```
 
-The frontend will start on `http://localhost:3000` and automatically open in your browser.
+The client will start on `http://localhost:3000` and automatically open in your browser.
 
 ### Production Mode
 
@@ -300,14 +307,16 @@ npm run build
 
 This creates an optimized production build in the `client/build` directory.
 
-#### Start the Production Server
+#### Start the Backend Server
 
 ```bash
 cd server
 npm start
 ```
 
-## 📡 API Endpoints
+**Note**: For production deployment, consider using process managers like PM2, or deploy to cloud platforms like Heroku, AWS, or Vercel.
+
+## 🔌 API Endpoints
 
 ### General Routes (`/general`)
 
@@ -322,9 +331,9 @@ npm start
   - Query parameters:
     - `page` - Page number
     - `pageSize` - Items per page
-    - `sort` - Sort field and direction (e.g., `{"field":"createdAt","sort":"desc"}`)
+    - `sort` - Sort field and direction (e.g., `{"field": "cost", "sort": "asc"}`)
     - `search` - Search term
-- `GET /client/geography` - Get geographic data
+- `GET /client/geography` - Get geographic sales data
 
 ### Sales Routes (`/sales`)
 
@@ -333,7 +342,24 @@ npm start
 ### Management Routes (`/management`)
 
 - `GET /management/admins` - Get all admin users
-- `GET /management/performance/:id` - Get performance data for a specific user
+- `GET /management/performance/:id` - Get performance metrics for a specific user
+
+## 🧭 Frontend Routes
+
+The application includes the following routes:
+
+- `/` - Redirects to `/dashboard`
+- `/dashboard` - Main dashboard with overview statistics
+- `/products` - Product listing and analytics
+- `/customers` - Customer management and insights
+- `/transactions` - Transaction history and details
+- `/geography` - Geographic sales visualization
+- `/overview` - Business overview statistics
+- `/daily` - Daily sales analytics
+- `/monthly` - Monthly sales analytics
+- `/breakdown` - Sales breakdown by category
+- `/admin` - Admin user management
+- `/performance` - Performance metrics and analytics
 
 ## 🗄️ Database Models
 
@@ -342,8 +368,8 @@ npm start
 ```javascript
 {
   name: String (required, 2-100 chars),
-  email: String (required, max 50, unique),
-  password: String (required, min 5),
+  email: String (required, max 50 chars, unique),
+  password: String (required, min 5 chars),
   city: String,
   state: String,
   country: String,
@@ -351,6 +377,20 @@ npm start
   phoneNumber: String,
   transactions: Array,
   role: String (enum: ["user", "admin", "superadmin"], default: "admin"),
+  timestamps: true
+}
+```
+
+### Product Model
+
+```javascript
+{
+  name: String,
+  price: Number,
+  description: String,
+  category: String,
+  rating: Number,
+  supply: Number,
   timestamps: true
 }
 ```
@@ -366,167 +406,169 @@ npm start
 }
 ```
 
-### Product Model
-
-Stores product information including name, description, price, category, and statistics.
-
-### ProductStat Model
-
-Tracks product-specific statistics including sales, units sold, and monthly data.
-
 ### OverallStat Model
 
-Stores overall business statistics including:
+Stores aggregated statistics including:
 
 - Total customers
 - Yearly sales totals
-- Monthly data breakdown
-- Daily data breakdown
+- Monthly data arrays
+- Daily data arrays
 - Sales by category
+
+### ProductStat Model
+
+Stores product-specific statistics and performance metrics.
 
 ### AffiliateStat Model
 
-Tracks affiliate marketing statistics and performance metrics.
+Stores affiliate marketing statistics and performance data.
 
-## 🎨 Frontend Architecture
+## 💻 Development
 
-### State Management
+### Code Structure
 
-The application uses **Redux Toolkit** with **RTK Query** for efficient state management and data fetching:
-
-- **API Slice**: Centralized API configuration in `src/state/api.js`
-- **Caching**: Automatic caching and invalidation of API responses
-- **Tags**: Used for cache invalidation and refetching
-
-### Routing
-
-React Router DOM handles client-side routing with the following structure:
-
-- All routes are wrapped in a `Layout` component
-- Default route (`/`) redirects to `/dashboard`
-- Protected routes can be implemented by adding authentication checks
-
-### Theme System
-
-The application features a comprehensive theme system:
-
-- **Dark/Light Mode**: Toggleable theme modes
-- **Custom Color Palette**: Purple and teal color scheme
-- **Responsive Typography**: Scalable font system
-- **Material-UI Integration**: Full MUI theme customization
-
-### Components
-
-#### Reusable Components
-
-- **Header**: Top navigation bar with user info and theme toggle
-- **Sidebar**: Navigation sidebar with menu items
-- **StatBox**: Displays key statistics with icons
-- **FlexBetween**: Utility component for flexbox layouts
-- **DataGridCustomToolbar**: Custom toolbar for data grids
-- **DataGridCustomColumnMenu**: Custom column menu for data grids
-- **BreakdownChart**: Chart component for category breakdowns
-- **OverviewChart**: Chart component for overview statistics
-
-#### Chart Components
-
-All charts use the **Nivo** library:
-
-- Bar charts for comparisons
-- Line charts for trends
-- Pie charts for distributions
-- Geographic maps for location data
-
-## 🔧 Development
-
-### Code Style
-
-- Use ES6+ JavaScript features
-- Follow React best practices (functional components, hooks)
-- Use meaningful variable and function names
-- Add comments for complex logic
+- **Components**: Reusable UI components located in `client/src/components/`
+- **Scenes**: Page-level components in `client/src/scenes/`
+- **State Management**: Redux store and API configuration in `client/src/state/`
+- **Backend Controllers**: Business logic in `server/controllers/`
+- **Routes**: API route definitions in `server/routes/`
+- **Models**: Database schemas in `server/models/`
 
 ### Adding New Features
 
-1. **Backend**: Add routes in `server/routes/`, controllers in `server/controllers/`, and models in `server/models/`
-2. **Frontend**: Add API endpoints in `client/src/state/api.js`, create scene components in `client/src/scenes/`
-3. **State Management**: Use RTK Query for data fetching, Redux for global state
+1. **New API Endpoint**:
 
-### Database Seeding
+   - Add controller function in `server/controllers/`
+   - Add route in `server/routes/`
+   - Import and use route in `server/index.js`
 
-To seed the database with sample data, uncomment the data insertion code in `server/index.js`:
+2. **New Frontend Page**:
 
-```javascript
-Product.insertMany(dataProduct);
-Transaction.insertMany(dataTransaction);
-OverallStat.insertMany(dataOverallStat);
-ProductStat.insertMany(dataProductStat);
-AffiliateStat.insertMany(dataAffiliateStat);
-User.insertMany(dataUser);
-```
+   - Create component in `client/src/scenes/`
+   - Add route in `client/src/App.js`
+   - Add API endpoint in `client/src/state/api.js` if needed
 
-**Note**: Only run this once to avoid duplicate data.
+3. **New Database Model**:
+   - Create schema in `server/models/`
+   - Import and use in controllers
 
-## 🚢 Deployment
+### Development Scripts
 
-### Backend Deployment
+#### Server Scripts
 
-1. Set up a MongoDB database (MongoDB Atlas recommended for cloud)
-2. Update `MONGO_URL` in production environment variables
-3. Deploy to a Node.js hosting service (Heroku, AWS, DigitalOcean, etc.)
-4. Ensure the server port is configured correctly
+- `npm start` - Start server in production mode
+- `npm run dev` - Start server with nodemon (auto-restart on changes)
 
-### Frontend Deployment
-
-1. Build the production bundle: `npm run build`
-2. Deploy the `build` folder to a static hosting service:
-   - **Netlify**: Drag and drop the build folder
-   - **Vercel**: Connect your repository for automatic deployments
-   - **AWS S3 + CloudFront**: Upload build folder to S3 bucket
-3. Update `REACT_APP_BASE_URL` to point to your production API
-
-### Environment Variables in Production
-
-Ensure all environment variables are set in your hosting platform's environment variable configuration.
-
-## 🔒 Security Considerations
-
-- **Helmet.js**: Already configured for security headers
-- **CORS**: Configured to allow cross-origin requests (adjust for production)
-- **Password Hashing**: Implement bcrypt for password hashing (recommended)
-- **JWT Authentication**: Consider implementing JWT for secure authentication
-- **Input Validation**: Add validation middleware (e.g., express-validator)
-- **Rate Limiting**: Consider adding rate limiting for API endpoints
-
-## 🧪 Testing
-
-### Running Tests
-
-```bash
-# Frontend tests
-cd client
-npm test
-
-# Backend tests (when implemented)
-cd server
-npm test
-```
-
-## 📝 Scripts Reference
-
-### Server Scripts
-
-- `npm start` - Start production server
-- `npm run dev` - Start development server with nodemon
-
-### Client Scripts
+#### Client Scripts
 
 - `npm start` - Start development server
 - `npm run build` - Build for production
 - `npm test` - Run tests
 - `npm run eject` - Eject from Create React App (irreversible)
 
+## 🏗️ Building for Production
+
+### Frontend Build
+
+```bash
+cd client
+npm run build
+```
+
+The build folder will contain optimized production files ready for deployment.
+
+### Deployment Options
+
+#### Frontend Deployment
+
+- **Vercel**: Connect your GitHub repository and deploy automatically
+- **Netlify**: Drag and drop the `build` folder or connect via Git
+- **AWS S3 + CloudFront**: Upload build folder to S3 and configure CloudFront
+- **Heroku**: Use static buildpack for React apps
+
+#### Backend Deployment
+
+- **Heroku**: Deploy Node.js app with MongoDB Atlas
+- **AWS EC2/Elastic Beanstalk**: Deploy Express server
+- **DigitalOcean**: App Platform or Droplets
+- **Railway**: Simple Node.js deployment
+
+### Environment Variables for Production
+
+Ensure all production environment variables are set:
+
+- `MONGO_URL` - Production MongoDB connection string
+- `PORT` - Production server port
+- `REACT_APP_BASE_URL` - Production API URL
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+#### MongoDB Connection Error
+
+**Problem**: `MongooseError: Operation timed out`
+
+**Solutions**:
+
+- Verify MongoDB is running: `mongod --version`
+- Check connection string in `.env`
+- Ensure MongoDB service is started
+- For Atlas: Check IP whitelist and credentials
+
+#### Port Already in Use
+
+**Problem**: `Error: listen EADDRINUSE: address already in use :::9000`
+
+**Solutions**:
+
+- Change PORT in `.env` file
+- Kill process using the port:
+
+  ```bash
+  # Windows
+  netstat -ano | findstr :9000
+  taskkill /PID <PID> /F
+
+  # macOS/Linux
+  lsof -ti:9000 | xargs kill
+  ```
+
+#### CORS Errors
+
+**Problem**: CORS policy blocking requests
+
+**Solutions**:
+
+- Verify CORS is enabled in `server/index.js`
+- Check `REACT_APP_BASE_URL` matches server URL
+- Ensure server is running before client
+
+#### Module Not Found Errors
+
+**Problem**: `Cannot find module 'xxx'`
+
+**Solutions**:
+
+- Delete `node_modules` and `package-lock.json`
+- Run `npm install` again
+- Check if package is listed in `package.json`
+
+#### Build Errors
+
+**Problem**: Build fails with various errors
+
+**Solutions**:
+
+- Clear npm cache: `npm cache clean --force`
+- Delete `node_modules` and reinstall
+- Check Node.js version compatibility
+- Review error messages for specific package issues
+
 ## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
@@ -534,13 +576,12 @@ npm test
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-### Contribution Guidelines
+### Coding Standards
 
-- Follow the existing code style
-- Write clear commit messages
-- Add comments for complex functionality
+- Follow existing code style and formatting
+- Add comments for complex logic
+- Update documentation for new features
 - Test your changes thoroughly
-- Update documentation as needed
 
 ## 📄 License
 
@@ -552,11 +593,13 @@ For support, please open an issue in the repository or contact the development t
 
 ## 🙏 Acknowledgments
 
-- Material-UI for the component library
-- Nivo for the visualization library
-- MongoDB for the database solution
-- React team for the amazing framework
+- Material-UI team for the excellent component library
+- Nivo team for beautiful data visualization components
+- MongoDB team for the robust database solution
+- React team for the powerful UI library
 
 ---
 
-**Built with ❤️ using React and Node.js**
+**Last Updated**: 2024
+
+**Version**: 1.0.0
