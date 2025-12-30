@@ -39,25 +39,25 @@ This dashboard application is designed to provide business intelligence and anal
 
 ### Frontend Features
 
-- 🎨 **Modern UI/UX**: Built with Material-UI (MUI) for a polished, professional interface
-- 🌓 **Dark/Light Mode**: Toggle between dark and light themes
-- 📊 **Interactive Charts**: Multiple chart types including line, bar, pie, and geographic maps
-- 📱 **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
-- 🔍 **Advanced Data Grids**: Sortable, filterable, and searchable data tables
-- 🧭 **Navigation**: Intuitive sidebar navigation with route management
-- ⚡ **State Management**: Redux Toolkit for efficient state management
-- 🎯 **Real-time Updates**: RTK Query for efficient data fetching and caching
+-  **Modern UI/UX**: Built with Material-UI (MUI) for a polished, professional interface
+-  **Dark/Light Mode**: Toggle between dark and light themes
+-  **Interactive Charts**: Multiple chart types including line, bar, pie, and geographic maps
+-  **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
+-  **Advanced Data Grids**: Sortable, filterable, and searchable data tables
+-  **Navigation**: Intuitive sidebar navigation with route management
+-  **State Management**: Redux Toolkit for efficient state management
+-  **Real-time Updates**: RTK Query for efficient data fetching and caching
 
 ### Backend Features
 
-- 🚀 **RESTful API**: Well-structured REST API endpoints
-- 🔒 **Security**: Helmet.js for security headers, CORS configuration
-- 📝 **Logging**: Morgan middleware for HTTP request logging
-- 🗄️ **Database**: MongoDB with Mongoose ODM
-- 📦 **Modular Architecture**: Organized controllers, routes, and models
-- 🔄 **Data Seeding**: Built-in data seeding capabilities for development
+-  **RESTful API**: Well-structured REST API endpoints
+-  **Security**: Helmet.js for security headers, CORS configuration
+-  **Logging**: Morgan middleware for HTTP request logging
+-  **Database**: MongoDB with Mongoose ODM
+-  **Modular Architecture**: Organized controllers, routes, and models
+-  **Data Seeding**: Built-in data seeding capabilities for development
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 ### Frontend
 
@@ -177,12 +177,12 @@ Before you begin, ensure you have the following installed on your system:
   - Prettier
   - MongoDB for VS Code
 
-## 🚀 Installation
+##  Installation
 
 ### Step 1: Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone (https://github.com/betuldanismaz/dashboard)
 cd dashboard
 ```
 
@@ -204,7 +204,7 @@ cd ../client
 npm install
 ```
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Environment Variables
 
@@ -424,7 +424,7 @@ Stores product-specific statistics and performance metrics.
 
 Stores affiliate marketing statistics and performance data.
 
-## 💻 Development
+##  Development
 
 ### Code Structure
 
@@ -467,7 +467,7 @@ Stores affiliate marketing statistics and performance data.
 - `npm test` - Run tests
 - `npm run eject` - Eject from Create React App (irreversible)
 
-## 🏗️ Building for Production
+##  Building for Production
 
 ### Frontend Build
 
@@ -502,7 +502,7 @@ Ensure all production environment variables are set:
 - `PORT` - Production server port
 - `REACT_APP_BASE_URL` - Production API URL
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -583,15 +583,15 @@ Contributions are welcome! Please follow these steps:
 - Update documentation for new features
 - Test your changes thoroughly
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 📞 Support
+##  Support
 
 For support, please open an issue in the repository or contact me.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Material-UI team for the excellent component library
 - Nivo team for beautiful data visualization components
